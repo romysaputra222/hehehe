@@ -68,7 +68,7 @@ body{
 .foto{
     width: 1000px;
     height: 600px;
-    background-image: url(18.jpg);
+    background-image: url(../../img/18.jpg);
     border-radius: 30px;
     margin-bottom: 20px;
     border-bottom: 5px solid #333;
@@ -137,7 +137,7 @@ body{
 }
 
 .me .gambar{
-    background-image: url(hehe.jpg);
+    background-image: url(../../img/hehe.jpg);
     width: 100px;
     height: 100px;
     background-size: cover;
