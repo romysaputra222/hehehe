@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'cyberpunk';
+    src: url('../../font/Cyberpunk/cyberpunk-regular-webfont.woff2') format('woff2'),
+         url('../../font/Cyberpunk/cyberpunk-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+body{
+    background-image: url(../../img/bg.jpg);
+    font-family: cyberpunk;
+    background-size: auto;
+}
+
+a{
+    width: 1000px;
+    height: 350px;
+    text-decoration: none;
+}
+
+.nama{
+    text-decoration: none;
+    width: 1000px;
+    margin: 350px auto;
+    background-color: #f6f004;
+    text-align: center;
+    line-height: 300px;
+    border-top: 2px ridge white;
+    border-left: 2px ridge white;
+    box-shadow: 30px 30px 20px -10px rgba(0, 0, 0, .5);
+    transition: .35s;
+}
+
+.nama h1{
+    font-size: 170px;
+    color: black;
+    /* background-color: #f3e600; */
+    background-color: #f6f004;
+    text-shadow: 4px 4px 2px #02d7f2
+    ,-4px -4px 2px red;
+}
+
+.nama:hover{
+    margin: 300px auto;
+    box-shadow: 60px 60px 20px -10px rgba(0, 0, 0, .5);
+}
