@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'cyber';
+    src: url('../../font/Cyberpunk/cyberpunk-regular-webfont.woff2') format('woff2'),
+         url('../../font/Cyberpunk/cyberpunk-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: #333;
+    font-family: cyber;
+}
+
+h1{
+    text-align: center;
+    margin-top: 50px;
+    color: yellow;
+    text-shadow: 3px 3px 3px black;
+    font-size: 120px;
+}
+
+.container, li, a, span{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 1000px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 200px;
+    text-align: center;
+    background-color: yellow;
+    border: 3px solid black;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .5);
+}
+
+.container li{
+    display: block;
+    float: left;
+    margin-left: 30px;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .5);
+    border: 3px solid black;
+}
+
+.container li span{
+    display: block;
+    width: 200px;
+    height: 200px;
+    font-size: 70px;
+    text-shadow: 2px 2px 2px yellow;
+    color: black;
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgba(200, 200, 200, .7);
+    position: absolute;
+    top: 0;
+    transform: scale(0);
+    transition: .3s;
+    opacity: 0;
+    filter: blur(30px);
+}
+
+.container li:hover span{
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0);
+}
+
+.clear{
+    clear: both;
+}
+
+.overlay{
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    transition: .7s;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 100px 0;
+}
+
+.overlay:target{
+    width: auto;
+    height: auto;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(27, 27, 27, .95);
+}
+
+.overlay img{
+    max-height: 100%;
+    box-shadow: 3px 3px 5px #030303;
+    opacity: 0;
+}
+
+.overlay:target img{
+    animation: zoomGambar 1s .3s forwards;
+}
+
+.overlay .close{
+    position: absolute;
+    padding: 10px;
+    top: 50px;
+    color: white;
+    text-decoration: none;
+    background-color: #030303;
+    border: 1px solid white;
+    border-radius: 20px;
+    line-height: 10px;
+    text-align: center;
+    opacity: 0;
+}
+
+.overlay:target .close{
+    animation: close 1s .3s forwards;
+}
+
+.next, .prev{
+    position: absolute;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 150px;
+    top: 40%;
+    margin-left: 10%;
+    text-shadow: 2px 2px 2px #030303;
+    opacity: 0;
+}
+
+.prev{
+    margin-left: -10%;
+}
+
+.overlay:target .next,
+.overlay:target .prev{
+    animation: pindah 3s .3s forwards;
+}
+
+
+@keyframes pindah {
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
+}
+
+@keyframes zoomGambar {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes close {
+    0%{
+        opacity: 0;
+        top: -100px;
+    }100%{
+        opacity: 1;
+        top: 50px;
+    }
+}
+
+
+
